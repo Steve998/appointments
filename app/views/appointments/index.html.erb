@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Image </th>
       <th>Physician <br>Name</th>
       <th>Patient <br>Name</th>
       <th>Appointment <br>Date and Time</th>
@@ -15,11 +16,11 @@
   <tbody>
     <% @appointments.each do |appointment| %>
       <tr>
+        <td><%= image_tag appointment.image_url(:thumb) if appointment.image? %></td>
         <td><%= appointment.physician.name %></td>
         <td><%= appointment.patient.name %></td>
         <td><%= appointment.appointmentdate %></td>
-      
-        <td><%= link_to 'Show', appointment %></td>
+        <td><%= link_to 'Show Record', appointment %></td>
         <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
         <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

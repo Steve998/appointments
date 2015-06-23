@@ -1,4 +1,4 @@
-<%= form_for(@appointment) do |f| %>
+<%= form_for(@appointment, :html => {:multipart => true}) do |f| %>
 <% if @appointment.errors.any? %>
 <div id="error_explanation">
   <h2><%= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
@@ -11,14 +11,22 @@
 </div>
 <% end %>
 
+<div>
+  <br>
+
+  <%= f.file_field :image %><br><br>
+
+</div>
+
+
 <div class="field">
-  <%= f.label :physician_id %><br>
+  <%= f.label :physician_id %><br><br><br>
   <%= f.select :physician_id, Physician.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'None'} %>
 
 </div>
 
 <div class="field">
-  <%= f.label :patient_id %><br>
+  <%= f.label :patient_id %><br><br><br>
   <%= f.select :patient_id, Patient.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'None'} %>
 
 </div>

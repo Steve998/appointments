@@ -1,10 +1,12 @@
 
 <h1>Welcome to the Appointment Page</h1>
-<p></p><%= link_to "Physicians Database", controller:physicians_path%><br>
-  Physician Count:       <%= Physician.first.count_physicians %></td>
+<div>
+<h3><%= link_to "Physicians List", controller:physicians_path%></h3>
+Current Number of Physicians:   <%= Physician.all.count.to_i %>
 
-<p></p><%= link_to "Patients Database", controller:patients_path%><br>
-  Patient Count:       <%= Patient.first.count_patients %></td>
+<h3><%= link_to "Patients List", controller:patients_path%></h3>
+Current Number of Patients:     <%= Patient.all.count.to_i %>
 
-<p></p><%= link_to "Appointments Database", controller:appointments_path%><br>
-  Appointment Count:       <%= Appointment.first.count_appointments %>
+<h3><%= link_to "Appointments List", controller:appointments_path%></h3>
+Current Number of Appointments: <%= Appointment.all.count.to_i %>
+</div>

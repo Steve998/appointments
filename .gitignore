@@ -17,3 +17,4 @@
 /tmp
 # Ignore the Uploads
 /public/uploads
+.env

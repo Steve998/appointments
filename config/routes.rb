@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   get 'appointment/physician_id'
 
   get 'appointment/patient_id'

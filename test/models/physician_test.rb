@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: physicians
+#
+#  id         :integer          not null, primary key
+#  name       :string
+#  speciality :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 require 'test_helper'
 
 class PhysicianTest < ActiveSupport::TestCase

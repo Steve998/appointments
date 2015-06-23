@@ -1,6 +1,7 @@
 class AppointmentsController < ApplicationController
 before_action :set_appointment, only: [:show, :edit, :update, :destroy]
 
+
 # GET /appointments
 # GET /appointments.json
 def index
@@ -69,6 +70,6 @@ private
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def appointment_params
-    params.require(:appointment).permit(:patient_id, :physician_id, :appointmentdate)
+    params.require(:appointment).permit(:patient_id, :physician_id, :appointmentdate, :image)
   end
 end

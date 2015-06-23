@@ -2,18 +2,22 @@
 
 <p>
   <strong>Patient_id:</strong>
-  <%= @appointment.patient_id %>
+  <%= @appointment.patient.name %>
 </p>
 
 <p>
   <strong>Physician_id:</strong>
-  <%= @appointment.physician_id %>
+
+  <%= @appointment.physician.name %>
+
 </p>
 
 <p>
   <strong>Appointment Date:</strong>
   <%= @appointment.appointmentdate %>
 </p>
+
+<%= image_tag @appointment.image_url.to_s %>
 
 
 <%= link_to 'Edit', edit_appointment_path(@appointment) %> |

@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
-
-
+gem 'activeadmin', github: 'activeadmin'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 
@@ -29,10 +28,24 @@ gem 'annotate', '~> 2.6.5'
 # User the 'thin' server instead of the default webrick
 gem 'thin'
 
+# Faker
+gem 'faker'
+
+# Gem fog
+gem 'fog'
+# mini magick
+gem 'mini_magick'
+# Carrier Wave gem
+gem 'carrierwave'
+
+# Paginate
+gem 'kaminari'
+
 # Use postgres and the Heroku rails gem for Heroku
 group :production do
   gem 'rails_12factor'
 end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -51,4 +64,6 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'dotenv-rails'
 end

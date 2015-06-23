@@ -1,6 +1,7 @@
 <h1>Editing Appointment</h1>
 
+<%= image_tag @appointment.image_url.to_s %>
 <%= render 'form' %>
 
 <%= link_to 'Show', @appointment %> |
-<%= link_to 'Back to Listing', appointment_path %>
+<%= link_to 'Back to Listing', appointments_path %>
